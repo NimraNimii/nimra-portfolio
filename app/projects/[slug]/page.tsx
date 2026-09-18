@@ -121,17 +121,21 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <div className="space-y-4">
               <h2 className="text-xl font-bold text-[#F0FDFA]">Key Features & Capabilities</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {project.features.map((feature) => (
-                  <Card key={feature} className="p-5 space-y-2">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-[#5EEAD4]" />
-                      <h3 className="text-sm font-semibold text-[#F0FDFA]">{feature}</h3>
-                    </div>
-                    <p className="text-xs text-[#B6C9C9] leading-relaxed">
-                      Integrated component of the {project.title} engine pipeline.
-                    </p>
-                  </Card>
-                ))}
+              {project.features.map((feature) => (
+  <Card key={feature} className="p-5 space-y-2">
+    <div className="flex items-center gap-2">
+      <span className="w-2 h-2 rounded-full bg-[#5EEAD4]" />
+      <h3 className="text-sm font-semibold text-[#F0FDFA]">
+        {feature}
+      </h3>
+    </div>
+
+    <p className="text-xs text-[#B6C9C9] leading-relaxed">
+      {project.featureDescriptions?.[feature] ??
+        `Core capability of the ${project.title} system.`}
+    </p>
+  </Card>
+))}
               </div>
             </div>
           )}

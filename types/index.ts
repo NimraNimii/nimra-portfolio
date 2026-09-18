@@ -17,6 +17,7 @@ export interface Project {
   category: ProjectCategory;
   summary: string;
   features?: string[];
+  featureDescriptions?: Record<string, string>;
   techStack: string[];
   architectureNotes?: string[];
   dhaalDetails?: {

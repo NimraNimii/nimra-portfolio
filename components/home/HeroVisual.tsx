@@ -69,13 +69,13 @@ export function HeroVisual() {
         <div className="mt-4 pt-4 border-t border-[rgba(94,234,212,0.12)]">
           <div className="relative w-full overflow-hidden rounded-xl border border-[rgba(94,234,212,0.2)] shadow-[0_0_20px_rgba(45,212,191,0.1)]">
             <Image
-              src="/images/nimra-rasheed.jpg"
-              alt="Nimra Rasheed — Software & ML Engineer"
-              width={400}
-              height={500}
-              className="w-full object-cover object-top"
-              priority
-            />
+  src="/images/nimi.png"
+  alt="Nimra Rasheed — AI Engineer and Full-Stack AI Product Developer"
+  width={941}
+  height={1141}
+  className="w-full object-cover object-center"
+  priority
+/>
           </div>
         </div>
       </div>
